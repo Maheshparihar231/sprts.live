@@ -1,0 +1,8 @@
+<div class="container">
+    <h1 class="text-4xl font-bold text-clip text-fuchsia-500">Live Cricket</h1>
+    
+    <div class="cards" style="margin: 10px; flex-wrap: wrap;display: flex;">
+      <app-card *ngFor="let matchi of liveMatches" [match]="matchi"></app-card>
+    </div>
+
+</div>

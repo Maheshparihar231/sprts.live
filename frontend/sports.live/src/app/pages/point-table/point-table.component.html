@@ -1,0 +1,29 @@
+<div class="table-container">
+    <h1 class="text-4xl font-bold text-clip text-fuchsia-500">Point Table</h1>
+    <div class="relative mt-5 overflow-x-auto shadow-md sm:rounded-lg">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <ng-container *ngFor="let heading of tableHeading; let index = index">
+                        <th scope="col" class="px-6 py-3">
+                            {{ heading }}
+                        </th>
+                    </ng-container>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let rowData of pointTableData.slice(1); let rowIndex = index">
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                      <!-- Assuming each row in the tableData array has corresponding values -->
+                      <ng-container *ngFor="let value of rowData; let colIndex = index">
+                        <td class="px-6 py-4">
+                          <!-- If you need to display the data starting from index 1, adjust the index -->
+                          {{ value }}
+                        </td>
+                      </ng-container>
+                    </tr>
+                  </ng-container>
+            </tbody>
+        </table>
+    </div>
+</div>
